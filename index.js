@@ -2,7 +2,7 @@
 
 import { createInterface } from "node:readline/promises";
 import { open, copyFile, access, constants, stat } from "node:fs/promises";
-import { extname, join } from "node:path";
+import { extname, join, basename } from "node:path";
 import logUpdate from 'log-update';
 
 console.log("NOTE: you should run this script as root\n")
@@ -12,7 +12,7 @@ const src = await getPath("Enter file path containing DLLs paths: ", (stat) => s
 const dest = await getPath("Enter destination folder to copy DLLs: ", (stat) => stat.isDirectory());
 
 console.log("🔎 Coping DLL files");
-await copyDLLs(src);
+await copyDLLs(src, dest);
 
 async function copyDLLs(logFilePath, dirname) {
     let logFile;
