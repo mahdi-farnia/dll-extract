@@ -1,0 +1,14 @@
+{
+  "name": "empty",
+  "version": "1.0.0",
+  "type": "module",
+  "repository": "https://github.com/mahdi-farnia/empty",
+  "author": "SoR <65429393+mahdi-farnia@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.4.7"
+  },
+  "dependencies": {
+    "log-update": "^5.0.1"
+  }
+}
