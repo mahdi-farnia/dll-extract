@@ -14,6 +14,8 @@ const dest = await getPath("Enter destination folder to copy DLLs: ", (stat) => 
 console.log("🔎 Coping DLL files");
 await copyDLLs(src, dest);
 
+tty.close();
+
 async function copyDLLs(logFilePath, dirname) {
     let logFile;
     let foundCount = 0;
